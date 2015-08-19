@@ -1,7 +1,7 @@
 {
   "name": "webpack-md5-hash",
   "version": "0.0.1",
-  "description": "Plugin to replace a standard webpack hash in a chunk name.",
+  "description": "Plugin to replace a standard webpack chunkhash with md5.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
