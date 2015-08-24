@@ -23,14 +23,9 @@ function WebpackMd5Hash () {
 
 WebpackMd5Hash.prototype.apply = function(compiler) {
     compiler.plugin("compilation", function(compilation) {
-        compilation.plugin("after-hash", function() {
-            for (var chunk_id in this.chunks) {
-                if (this.chunks.hasOwnProperty(chunk_id)) {
-                    var chunk = this.chunks[chunk_id];
-                    var source = chunk.modules.sort(compareModules).map(getModuleSource).reduce(concatenateSource);
-                    chunk.renderedHash = md5(source);
-                }
-            }
+        compilation.plugin("chunk-hash", function(chunk, chunkHash) {
+            var source = chunk.modules.sort(compareModules).map(getModuleSource).reduce(concatenateSource);
+            chunk.hash = md5(source);
         });
     });
 };
