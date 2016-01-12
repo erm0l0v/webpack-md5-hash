@@ -1,0 +1,12 @@
+test_0_12:
+  build: .
+  dockerfile: ./dockerfiles/0.12/Dockerfile
+  volumes:
+    - ./:/app/
+  command: npm test
+test_0_10:
+  build: .
+  dockerfile: ./dockerfiles/0.10/Dockerfile
+  volumes:
+    - ./:/app/
+  command: npm test

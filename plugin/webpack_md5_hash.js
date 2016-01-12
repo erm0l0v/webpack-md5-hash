@@ -1,10 +1,14 @@
+"use strict";
+
 var md5 = require("md5");
 
 function compareModules(a,b) {
-    if (a.resource < b.resource)
+    if (a.resource < b.resource) {
         return -1;
-    if (a.resource > b.resource)
+    }
+    if (a.resource > b.resource) {
         return 1;
+    }
     return 0;
 }
 

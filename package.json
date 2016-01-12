@@ -4,6 +4,7 @@
   "description": "Plugin to replace a standard webpack chunkhash with md5.",
   "main": "index.js",
   "scripts": {
+    "pretest": "jshint *.js plugin example/js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +25,8 @@
   "homepage": "https://github.com/erm0l0v/webpack-md5-hash",
   "dependencies": {
     "md5": "^2.0.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0"
   }
 }
