@@ -4,7 +4,8 @@
   "description": "Plugin to replace a standard webpack chunkhash with md5.",
   "main": "index.js",
   "scripts": {
-    "pretest": "jshint *.js spec plugin example/js",
+    "clean": "rimraf dist",
+    "pretest": "jshint",
     "test": "jasmine-node --captureExceptions spec"
   },
   "repository": {
@@ -18,6 +19,11 @@
     "md5"
   ],
   "author": "Kirill Ermolov",
+  "contributors": [{
+    "name": "Sebastien Dubois",
+    "email": "seb@dsebastien.net",
+    "url": "https://www.dsebastien.net"
+  }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/erm0l0v/webpack-md5-hash/issues"
