@@ -1,0 +1,11 @@
+.idea
+/dist
+.vim
+.git
+dockerfiles
+.dockerignore
+.editorconfig
+build.js
+docker-compose.template
+docker-compose.yml
+versions.json
