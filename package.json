@@ -1,8 +1,11 @@
 {
-  "name": "webpack-md5-hash",
-  "version": "0.0.5",
+  "name": "md5-hash-webpack-plugin",
+  "version": "0.1.0",
   "description": "Plugin to replace a standard webpack chunkhash with md5.",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "pretest": "jshint",
@@ -10,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/erm0l0v/webpack-md5-hash.git"
+    "url": "https://github.com/adventure-yunfei/md5-hash-webpack-plugin.git"
   },
   "keywords": [
     "webpack",
@@ -18,17 +21,15 @@
     "plugin",
     "md5"
   ],
-  "author": "Kirill Ermolov",
-  "contributors": [{
-    "name": "Sebastien Dubois",
-    "email": "seb@dsebastien.net",
-    "url": "https://www.dsebastien.net"
-  }],
+  "author": "adventure-yunfei",
+  "contributors": [
+    "Sebastien Dubois <seb@dsebastien.net> (https://www.dsebastien.net)",
+    "adventure-yunfei <adventure030@gmail.com> (http://blog.yunfei.me)"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/erm0l0v/webpack-md5-hash/issues"
   },
-  "homepage": "https://github.com/erm0l0v/webpack-md5-hash",
+  "homepage": "https://github.com/adventure-yunfei/md5-hash-webpack-plugin",
   "dependencies": {
     "md5": "^2.0.0"
   },
@@ -37,5 +38,8 @@
     "jasmine-node": "^1.14.5",
     "jshint": "^2.8.0",
     "rimraf": "^2.5.0"
+  },
+  "directories": {
+    "example": "example"
   }
 }
