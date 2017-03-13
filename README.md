@@ -1,6 +1,6 @@
-# webpack-md5-hash
+# md5-hash-webpack-plugin
 
-[![NPM](https://nodei.co/npm/webpack-md5-hash.png)](https://npmjs.org/package/webpack-md5-hash)
+[![NPM](https://nodei.co/npm/md5-hash-webpack-plugin.png)](https://npmjs.org/package/md5-hash-webpack-plugin)
 
 Plugin to replace a standard webpack chunkhash with md5.
 
@@ -52,6 +52,8 @@ I'll explain each of them later, but it's too long. So first, I make the conclus
 - The original `webpack-md5-hash` calculates chunk hash depending on only `Module source code`, which means, if source code remains the same but some other items change, the chunk hash will be the same (incorrectly!). (To be short, chunk with different contents gets the same chunk hash, and happens very frequently.)
 
 ## Now Lets see what are these chunk related items
+
+(If you read Chinese, you can see [details in my blog here](http://blog.yunfei.me/blog/webpack_long_term_caching.html).)
 
 Let's check a real webpack chunk content:
 
@@ -281,6 +283,6 @@ This implementation calculates chunk hash based on:
 
 But, without webpack bootstrap runtime.
 
-To solve this, you should make a standalone webpack bootstrap runtime with empty modules (or you could just extract only the changable filename map which may be called manifest), and inline it into final html output. (If you read Chinese, you can see [details in my blog here](http://blog.yunfei.me/blog/webpack_long_term_caching.html).)
+To solve this, you should make a standalone webpack bootstrap runtime with empty modules (or you could just extract only the changable filename map which may be called manifest), and inline it into final html output.
 
 Anyway, we now get a more correct md5 chunk hash.
