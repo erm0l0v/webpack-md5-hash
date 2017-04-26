@@ -281,7 +281,7 @@ This implementation calculates chunk hash based on:
 - Module Ids and also their dependent module ids
 - Chunk id
 
-But, without webpack bootstrap runtime.
+But, without webpack bootstrap runtime (it only exists for the entry chunk when multiple chunks exist).
 
 To solve this, you should make a standalone webpack bootstrap runtime with empty modules (or you could just extract only the changable filename map which may be called manifest), and inline it into final html output.
 
