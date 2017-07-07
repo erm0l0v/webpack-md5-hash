@@ -37,7 +37,7 @@ module.exports = {
 
 ### Setup Docker
 
-* Install [Doker Toolbox](https://www.docker.com/docker-toolbox)
+* Install [Docker Toolbox](https://www.docker.com/docker-toolbox)
 * Setup [Docker Machine](https://docs.docker.com/machine/get-started/)
 
 ### Generate Docker files
