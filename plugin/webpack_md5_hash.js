@@ -1,6 +1,6 @@
 "use strict";
 
-var md5 = require("md5");
+var hasha = require("hasha");
 
 function compareModules(a,b) {
     if (a.resource < b.resource) {
@@ -29,7 +29,7 @@ WebpackMd5Hash.prototype.apply = function(compiler) {
     compiler.plugin("compilation", function(compilation) {
         compilation.plugin("chunk-hash", function(chunk, chunkHash) {
             var source = chunk.modules.sort(compareModules).map(getModuleSource).reduce(concatenateSource, ''); // we provide an initialValue in case there is an empty module source. Ref: http://es5.github.io/#x15.4.4.21
-            var chunk_hash = md5(source);
+            var chunk_hash = hasha(source, { algorithm: 'md5' });
             chunkHash.digest = function () {
                 return chunk_hash;
             };

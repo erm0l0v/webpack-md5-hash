@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/erm0l0v/webpack-md5-hash",
   "dependencies": {
-    "md5": "^2.0.0"
+    "hasha": "^2.2.0"
   },
   "devDependencies": {
     "argparse": "^1.0.4",
