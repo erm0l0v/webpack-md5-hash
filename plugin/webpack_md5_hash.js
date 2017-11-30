@@ -29,7 +29,7 @@ WebpackMd5Hash.prototype.apply = function(compiler) {
     compiler.plugin("compilation", function(compilation) {
         compilation.plugin("chunk-hash", function(chunk, chunkHash) {
             var modules = chunk.mapModules ? chunk.mapModules(getModuleSource) : chunk.modules.map(getModuleSource);
-            var source = modules.sort(sortById).reduce(concatenateSource, ''); // we provide an initialValue in case there is an empty module source. Ref: http://es5.github.io/#x15.4.4.21
+            var source = modules.sort(compareModules).reduce(concatenateSource, ''); // we provide an initialValue in case there is an empty module source. Ref: http://es5.github.io/#x15.4.4.21
             var chunk_hash = md5(source);
             chunkHash.digest = function () {
                 return chunk_hash;
