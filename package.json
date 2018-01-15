@@ -3,6 +3,7 @@
   "version": "0.0.6",
   "description": "Plugin to replace a standard webpack chunkhash with md5.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
     "pretest": "jshint",
@@ -30,6 +31,7 @@
   },
   "homepage": "https://github.com/erm0l0v/webpack-md5-hash",
   "dependencies": {
+    "@types/webpack": "*",
     "md5": "^2.0.0"
   },
   "devDependencies": {
